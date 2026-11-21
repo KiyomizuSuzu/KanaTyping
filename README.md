@@ -5,8 +5,8 @@ Kotlinで開発された、日本語のかな入力練習用Androidアプリで�
 
 ### ビルド方法
 以下のツールがインストールされていることを確認してください。
-- [Android CLI](https://developer.android.com/tools/agents/android-cli/download#windows)
-- [Java SE Development Kit 27](https://www.oracle.com/asean/java/technologies/downloads/#jdk27-windows)
+- [Android CLI](https://developer.android.com/tools/agents/android-cli/download?hl=ja#windows)
+- [Java SE Development Kit 27](https://www.oracle.com/jp/java/technologies/downloads/#jdk27-windows)
 - Android SDK：PowerShellで `android sdk install platforms/android-36 build-tools platform-tools` を実行してインストールしてください。
 
 リポジトリのルートディレクトリでPowerShellを開き、以下のコマンドを実行すると、署名済みのリリースAPKをビルドできます。
