@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+.vscode
+app-release.apk
+app-release.apk.idsig
