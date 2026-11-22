@@ -2,7 +2,7 @@
 
 # KanaTyping
 Kotlinで開発された、日本語のかな入力練習用Androidアプリです。Android標準のUIコンポーネントを使用しています。
-
+<br><br><img src="Preview.avif" width=50% />
 ### ビルド方法
 以下のツールがインストールされていることを確認してください。
 - [Android CLI](https://developer.android.com/tools/agents/android-cli/download?hl=ja#windows)
@@ -28,7 +28,7 @@ AGPL-3.0に従う以上、対象コードは同じライセンスのまま維持
 
 # KanaTyping
 An Android application built with Kotlin for practising Japanese kana typing and uses Android's native UI components.
-
+<br><br><img src="Preview.avif" width=50% />
 ### To Build the Source Code
 Ensure you have the following installed:
 - [Android CLI](https://developer.android.com/tools/agents/android-cli/download#windows)
