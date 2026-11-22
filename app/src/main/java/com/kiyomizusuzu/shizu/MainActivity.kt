@@ -241,7 +241,7 @@ class MainActivity : ComponentActivity() {
     private fun showKeyboard() {
         inputPreview.post {
             inputPreview.requestFocus()
-            keyboardManager.showSoftInput(inputPreview, InputMethodManager.SHOW_IMPLICIT)
+            keyboardManager.showSoftInput(inputPreview, 0)
         }
     }
     private fun hideKeyboard() {

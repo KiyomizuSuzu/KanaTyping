@@ -18,12 +18,17 @@ keystoreProperties.load(keystorePropertiesFile.inputStream())
 
 android {
     namespace = "com.kiyomizusuzu.shizu"
-    compileSdk = 36
+    compileSdk {
+        version = release(37) {
+            minorApiLevel = 2
+        }
+    }
+    buildToolsVersion = "37.0.0"
 
     defaultConfig {
         applicationId = "com.kiyomizusuzu.shizu"
-        minSdk = 24
-        targetSdk = 36
+        minSdk = 34
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
     }
@@ -52,7 +57,7 @@ android {
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_25
-        targetCompatibility = JavaVersion.VERSION_25
+        targetCompatibility = JavaVersion.VERSION_27
     }
 
     buildFeatures {
@@ -69,8 +74,16 @@ android {
     }
 }
 
+androidComponents {
+    onVariants(selector().withBuildType("release")) { variant ->
+        variant.outputs.forEach { output ->
+            output.outputFileName.set("Kana.apk")
+        }
+    }
+}
+
 kotlin {
-    jvmToolchain(25)
+    jvmToolchain(27)
 }
 
 dependencies {
