@@ -7,7 +7,7 @@ Kotlinで開発された、日本語のかな入力練習用Androidアプリで�
 以下のツールがインストールされていることを確認してください。
 - [Android CLI](https://developer.android.com/tools/agents/android-cli/download?hl=ja#windows)
 - [Java SE Development Kit 27](https://www.oracle.com/jp/java/technologies/downloads/#jdk27-windows)
-- Android SDK：PowerShellで `android sdk install platforms/android-36 build-tools platform-tools` を実行してインストールしてください。
+- Android SDK：PowerShellで `android sdk install platforms/android-37.2 build-tools/37.0.0 platform-tools` を実行してインストールしてください。
 
 リポジトリのルートディレクトリでPowerShellを開き、以下のコマンドを実行すると、署名済みのリリースAPKをビルドできます。
 ```powershell
@@ -33,7 +33,7 @@ An Android application built with Kotlin for practising Japanese kana typing and
 Ensure you have the following installed:
 - [Android CLI](https://developer.android.com/tools/agents/android-cli/download#windows)
 - [Java SE Development Kit 27](https://www.oracle.com/asean/java/technologies/downloads/#jdk27-windows)
-- Android SDK by running `android sdk install platforms/android-36 build-tools platform-tools` in Powershell.
+- Android SDK by running `android sdk install platforms/android-37.2 build-tools/37.0.0 platform-tools` in Powershell.
 
 Open PowerShell in the repository root directory and run the following command to build an automatically signed release APK:
 ```powershell
