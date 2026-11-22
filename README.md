@@ -2,7 +2,10 @@
 
 # KanaTyping
 Kotlinで開発された、日本語のかな入力練習用Androidアプリです。Android標準のUIコンポーネントを使用しています。
-<br><br><img src="preview.avif" width=50% style="margin"/><img src="preview2.avif" width=50% />
+<h2 align="center">Previews</h2>
+<img src="preview.avif" width=50% style="margin"/><img src="preview2.avif" width=50% />
+
+---
 ### ビルド方法
 以下のツールがインストールされていることを確認してください。
 - [Android CLI](https://developer.android.com/tools/agents/android-cli/download?hl=ja#windows)
