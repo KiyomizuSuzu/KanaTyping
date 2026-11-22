@@ -1,8 +1,9 @@
 package com.kiyomizusuzu.shizu
 
+import androidx.activity.OnBackPressedCallback
+import androidx.activity.ComponentActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import android.R
-import android.app.Activity
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.Typeface
@@ -62,7 +63,7 @@ private data class Session(
     val timestamp: Long,
     val tests: List<Exam>
 )
-class MainActivity : Activity() {
+class MainActivity : ComponentActivity() {
     // data to practise on
     private val answers = listOf(
         "きょうはきゃくがきます。",
@@ -109,7 +110,33 @@ class MainActivity : Activity() {
         actionBar?.hide() // Removes the annoying header at the top
         loadHistory()
         buildHomeScreen()
+        setupBackNavigation()
         startTest()
+    }
+    private fun setupBackNavigation() {
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                when {
+                    homeScreen.parent == null && !testFinished -> {
+                        setContentView(homeScreen)
+                        inputPreview.clearFocus()
+                        hideKeyboard()
+                    }
+                    testFinished -> {
+                        currentTest = 0
+                        currentSessionResults.clear()
+                        buildHomeScreen()
+                        startTest()
+                        inputPreview.clearFocus()
+                        hideKeyboard()
+                    }
+                    else -> {
+                        isEnabled = false
+                        onBackPressedDispatcher.onBackPressed()
+                    }
+                }
+            }
+        })
     }
     private fun startTest() {
         testFinished = false
