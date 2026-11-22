@@ -27,9 +27,7 @@ android {
     }
     signingConfigs {
         create("release") {
-            storeFile = rootProject.file(
-                keystoreProperties.getProperty("storeFile")
-            )
+            storeFile = rootProject.file(keystoreProperties.getProperty("storeFile"))
             storePassword = keystoreProperties.getProperty("storePassword")
             keyAlias = keystoreProperties.getProperty("keyAlias")
             keyPassword = keystoreProperties.getProperty("keyPassword")
@@ -62,9 +60,9 @@ android {
     }
 }
 androidComponents {
-    onVariants(selector().withBuildType("release")) { variant ->
-        variant.outputs.forEach { output ->
-            output.outputFileName.set("Kana.apk")
+    onVariants(selector().withBuildType("release")) { 
+        variant -> variant.outputs.forEach { 
+            output -> output.outputFileName.set("Kana.apk")
         }
     }
 }
