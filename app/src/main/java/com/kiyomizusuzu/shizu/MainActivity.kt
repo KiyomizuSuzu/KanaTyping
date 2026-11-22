@@ -131,8 +131,7 @@ class MainActivity : ComponentActivity() {
                         hideKeyboard()
                     }
                     else -> {
-                        isEnabled = false
-                        onBackPressedDispatcher.onBackPressed()
+                        finish()
                     }
                 }
             }
