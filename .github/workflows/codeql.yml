@@ -59,8 +59,8 @@ jobs:
     - name: Set up Java 27
       uses: actions/setup-java@v6
       with:
-        distribution: oracle-openjdk
-        java-version: '27-ea'
+        distribution: oracle
+        java-version: '27'
     # Add any setup steps before running the `github/codeql-action/init` action.
     # This includes steps like installing compilers or runtimes (`actions/setup-node`
     # or others). This is typically only required for manual builds.
